@@ -1,0 +1,467 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-size: 1rem;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h1{
+    font-size: 2.5rem; 
+    font-family: "Roboto", sans-serif;
+}
+h2{
+    font-size: 2rem; 
+    font-family: "Roboto", sans-serif;
+}
+h3{
+    font-size: 1.75rem; 
+    font-family: "Roboto", sans-serif;
+}
+h4{
+    font-size: 1.5rem; 
+    font-family: "Roboto", sans-serif;
+}
+h5{
+    font-size: 1.25rem; 
+    font-family: "Roboto", sans-serif;
+}
+h6{
+    font-size: 1rem; 
+    font-family: "Roboto", sans-serif;
+}
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 100px;
+    padding: 0 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #AB8E66;
+    background-color: #EF4444;
+    background: linear-gradient(90deg, #7a0303, #c05a5a);
+}
+
+#navbar .links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 300px;
+}
+
+#navbar .links li{
+    list-style: none;
+}
+
+#navbar .links a{
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+    color: #DEB992;
+}
+
+#nav-toggle{
+    position: absolute;
+    top: -100px;
+}
+
+#navbar .icon-burger{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#navbar .icon-burger .line{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #333333;
+}
+
+#welcome-section{
+    background-color: grey;
+    height: 100vh;
+    margin-top: 100px;
+    z-index: 8;
+}
+
+#welcome-wrapper{
+    background-image: url("https://github.com/cardo8819/images/blob/main/welcome_wrapper.png?raw=true");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.8);
+}
+
+.bio{
+    width: 40%;
+    background-color: grey;
+    padding: 20px 40px;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.25rem;
+    z-index: 2;
+    opacity: .9;
+}
+
+.bio p{
+    margin-bottom: 10px; 
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 300;
+}
+
+.banner{
+    width: 60%;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-heading{
+    margin-bottom: 20px;
+    font-size: 4rem;
+    color: #DEB992;
+    font-weight: 400;
+}
+
+.banner-job-title{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #DEB992;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#banner-image{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#projects{
+    background-color: #6C88FF; 
+    background: linear-gradient(to top, #09203f, #537895); 
+    padding: 5rem 0;
+}
+
+h2.projects-section-header{
+    max-width: 640px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+
+.grid-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.project-tile{
+   width: 30%;
+   box-shadow: 0 2px 10px rgba(236, 234, 234, 0.1);
+}
+
+.image-container{
+    height: 75%;
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #303841;
+    padding: 20px;
+    height: 25%;
+    border-radius: 0 0 5px 5px;
+}
+
+.project-tile a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.title-link{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    transition: all .2s ease-in;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.title-link:hover, .repo-link:hover{
+    color: #AB8E66;
+}
+
+.repo-link{
+    font-style: italic;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    transition: color .2s ease-in-out;
+    font-weight: 200;
+}
+
+#contacts{
+    min-height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#F4F4F4;
+}
+
+
+#contacts-text{
+    margin-bottom: 20px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#contacts-text h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+#contacts-text p{
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+#contact-links{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.twitter-icon{
+    color: #27A7DE;
+}
+
+.github-icon{
+    color: #171515;
+}
+
+.email-icon{
+    color: #000000;
+}
+.facebook-icon{
+    color: #4267B2
+}
+.icon{
+    font-size: 42px;
+    display: flex;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+#contact-links a:hover{
+    color: #AB8E66;
+}
+
+footer{
+    min-height: 75px;
+    background-color: #EF4444;
+    background: linear-gradient(90deg, #7a0303, #c05a5a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border-top: 1px solid #AB8E66;
+    text-align: center;
+    font-weight: 200;
+}
+
+@media  screen and (max-width: 300px) {
+  html{
+    font-size: 12px;
+  }
+
+  #welcome-wrapper{
+    justify-content: center;
+  }
+  .banner-heading{
+    font-size: 2rem;
+  }
+  .banner-job-title{
+    font-size: 1.25rem;
+  }
+  .bio p{
+    font-size: 0.875rem;
+  }
+
+  
+}
+
+@media screen and (max-width: 400px) {
+ h1.banner-heading{
+    font-size: 2rem;
+ }
+ p.banner-job-title{
+    font-size: 1.2rem;
+ }
+h2.projects-section-header{
+    font-size: 1.5rem;
+  }
+#contacts h2{
+    font-size: 1.5rem;
+}
+#contacts-text p{
+    font-size: 1rem;
+  }
+.icon{
+    font-size: 30px;
+}
+.header-link{
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 704px) {
+    div.project-tile{
+     width: 100%;
+    }
+}
+  
+@media screen and (max-width: 738px) {
+html{
+    font-size: 16px;
+}
+#navbar .links{
+       position: fixed;
+       top: 100px; 
+       left: 0;
+       right: 0;
+       z-index: 9;
+       flex-direction: column;
+       justify-content: space-evenly;
+       transition: all .3s ease-in-out;
+       height: auto;
+       width: auto;
+       text-align: center;
+       overflow: hidden;
+       max-height: 0;
+       border-bottom: 1px solid #AB8E66;
+       background-color: #EF4444;
+       background: linear-gradient(90deg, #7a0303, #c05a5a);
+}
+#navbar{
+    border-bottom: none;
+}
+#navbar .links a{
+    font-size: 20px;
+    font-weight: 300;
+    transition: color .2ms ease;
+}
+#navbar .links a:hover{
+    color: #fff;
+}
+#navbar .icon-burger{
+    display: block;
+    cursor: pointer; 
+}
+#navbar :checked ~ .links{
+    max-height: 200px;
+    background-color: #44403C;
+}
+.banner-heading{
+    font-size: 3rem;
+}
+.bio{
+    font-size: 1rem;
+}
+#banner-image{
+    height: 150px !important;
+    width: 150px !important;
+}
+.bio{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+}
+
+@media screen and (max-width: 993px) {
+    #welcome-wrapper{
+        flex-direction: column-reverse;
+    }
+    #welcome-section{
+        height: 100vh;
+    }
+    #banner-image{
+        height: 200px;
+        width: 200px;
+    }
+    #welcome-wrapper{
+        height: 100%;
+        padding: 20px 10px;
+    }
+    .bio{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .banner{
+        width: 100%;
+    }
+}
+ 
+ @media screen and (max-width: 1000px) {
+    .project-tile{
+     width: 40%;
+    }
+ }
+
+
+        
